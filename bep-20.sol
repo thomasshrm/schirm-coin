@@ -340,7 +340,7 @@ contract Ownable is Context {
   }
 }
 
-contract BEP20USDT is Context, IBEP20, Ownable {
+contract BEP20SCHIRMCOIN is Context, IBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -353,10 +353,10 @@ contract BEP20USDT is Context, IBEP20, Ownable {
   string public _name;
 
   constructor() public {
-    _name = "Tether USD";
-    _symbol = "USDT";
+    _name = "Schirm Coin";
+    _symbol = "SCH";
     _decimals = 18;
-    _totalSupply = 30000000000000000000000000;
+    _totalSupply = 1000000 * 10 ** 18;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
